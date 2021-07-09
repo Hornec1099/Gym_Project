@@ -9,7 +9,7 @@ def save(member):
     results = run_sql(sql, values)
     member.id = results[0]['id']
     return member
-    
+
 
 def select_all():
     members = []
@@ -48,3 +48,4 @@ def update(member):
 def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
+

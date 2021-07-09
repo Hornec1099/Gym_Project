@@ -4,9 +4,13 @@ from models.member import Member
 
 import repositories.member_repository as member_repository
 
+member_repository.delete_all()
+
 activity1 = Activity( "Dodgeball 101", "10/07/2021", "14:00", "Dodge, Duck, Dip, Dive and Dodge")
 activity2 = Activity( "How to be a Pirate", "12/07/2021","18:00", "Sail the Seven Seas")
 activity3 = Activity( "Cheerleading Essentials", "20/07/2021", "12:00", "Handstands and girl talk")
+
+
 
 
 member1 = Member( "Steve the Pirate", 35)
