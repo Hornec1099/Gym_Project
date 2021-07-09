@@ -1,4 +1,4 @@
-from Carbon.QuickTime import dataRefWasNotResolved
+
 class Activity:
 
     def __init__(self, activity_name, date, time, description, id = None):

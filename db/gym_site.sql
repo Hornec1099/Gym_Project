@@ -12,7 +12,7 @@ CREATE TABLE activities(
     id SERIAL PRIMARY KEY,
     name_of_activity VARCHAR(255),
     day_of DATE,
-    time_of INT,
+    time_of VARCHAR(255),
     description VARCHAR(255)
 );
 
