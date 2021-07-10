@@ -4,7 +4,9 @@ from models.member import Member
 
 import repositories.member_repository as member_repository
 import repositories.activity_repository as activity_repository
+import repositories.booking_repository as booking_repository
 
+booking_repository.delete_all()
 member_repository.delete_all()
 activity_repository.delete_all()
 
@@ -29,3 +31,7 @@ member_repository.save(member3)
 booking1 = Booking( member1 , activity2 )
 booking2 = Booking( member3 , activity3 )
 booking3 = Booking( member2 , activity1 )
+
+booking_repository.save(booking1) 
+booking_repository.save(booking2) 
+booking_repository.save(booking3) 
