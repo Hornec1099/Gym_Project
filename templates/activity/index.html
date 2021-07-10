@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>  Here are all Available Activities here at Average Joe's </h2>
+
+<p><a href = '/activity/new'> Add a New Activity </a></p>
+
+{% for activity in activities %}
+<table>
+    <tr>
+        <th> Activity</th>
+        <th> Date</th>
+        <th> Time</th>
+        <th> Description</th>
+    </tr>
+    
+    <tr>
+        <td> {{activity.name}}</td>
+        <td> {{activity.date}}</td>
+        <td> {{activity.time}}</td>
+        <td> {{activity.description}}</td>
+    </tr>
+</table>
+
+<br>
+{%endfor%}
+
+</table>
+
+{% endblock %}

@@ -1,6 +1,8 @@
 from db.run_sql import run_sql
 
 from models.booking import Booking
+from models.activity import Activity
+from models.member import Member
 
 import repositories.member_repository as member_repository
 import repositories.activity_repository as activity_repository
@@ -25,16 +27,26 @@ def select_all():
         bookings.append(booking)
     return bookings
 
-def select(id):
-    booking = None
-    sql = "SELECT * FROM bookings WHERE id = %s"
-    values = [id]
+def select_activity(booking):
+    activity = None
+    sql = "SELECT * FROM activities WHERE id = %s"
+    values = [booking.activity.id]
     result = run_sql(sql , values)
     
     if result is not None:
-        booking = Booking( result['member_id'], result['activity_id'])
+        activity = Activity(result['name_of_activity'], result['day_of'], result['time_of'],result['description'],result['id'])     
+    return activity
+
+def select_member(booking):
+    member = None
+    sql = "SELECT * FROM members WHERE id = %s"
+    values = [booking.member.id]
+    result = run_sql(sql , values)
     
-    return booking
+    if result is not None:
+        member = Member(result['name_of_activity'], result['day_of'], result['time_of'],result['description'],result['id'])    
+    return member
+
 
 def delete_all():
     sql = "DELETE FROM bookings"

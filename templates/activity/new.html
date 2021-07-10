@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3> What's the New Activity? </h3>
+
+<form action = '/activity' method = 'post'>
+    
+    <label for = 'activity_name'> What's the Name? :</label>
+    <input type = 'text' name = 'activity_name' id = 'activity_name' >
+    
+    <label for = 'date'> When is it On? : </label>
+    <input type ="date" name ='date' id ='date'>
+
+    <label for =' time'> What time is is on? : </label>
+    <input type ="time" max = "20:00" min = "09:00" name = 'time' id = 'time' >
+
+    <label for ='description'> What can people expect? :</label>
+    <textarea name = 'description' id = 'description' col = 15 row = 2> </textarea>
+
+    <button type = 'submit'> Add the Activity </button>
+</form>
+
+{% endblock %}

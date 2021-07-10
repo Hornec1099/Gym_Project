@@ -51,14 +51,14 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-def members(id):
+def members(activity):
     members = []
-    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.members_id = members.id WHERE activity_id = %s"
-    values = [id]
+    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE activity_id = %s"
+    values = [activity.id]
     results = run_sql (sql, values)
 
     for result in results:
-        member = Member(result['name_of_activity'], result['day_of'], result['time_of'],result['description'],result['id'])
+        member = Member(result['name'] , result['age'], result['id'])
         members.append(member)
 
     return members

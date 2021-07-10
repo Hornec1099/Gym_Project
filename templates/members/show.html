@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> {{member.name}} </h1>
+
+<p> Members Age : {{member.age}} </p>
+<p><a href = '/members/{{member.id}}/edit'> Edit Details</a></p>
+<p><a href = '/members/{{member.id}}/delete'> Delete</a></p>
+
+
+{% endblock %}
