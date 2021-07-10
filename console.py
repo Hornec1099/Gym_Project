@@ -3,14 +3,18 @@ from models.booking import Booking
 from models.member import Member
 
 import repositories.member_repository as member_repository
+import repositories.activity_repository as activity_repository
 
 member_repository.delete_all()
+activity_repository.delete_all()
 
-activity1 = Activity( "Dodgeball 101", "10/07/2021", "14:00", "Dodge, Duck, Dip, Dive and Dodge")
-activity2 = Activity( "How to be a Pirate", "12/07/2021","18:00", "Sail the Seven Seas")
-activity3 = Activity( "Cheerleading Essentials", "20/07/2021", "12:00", "Handstands and girl talk")
+activity1 = Activity( "Dodgeball 101", "07/20/2021", "14:00", "Dodge, Duck, Dip, Dive and Dodge")
+activity2 = Activity( "How to be a Pirate", "07/15/2021","18:00", "Sail the Seven Seas")
+activity3 = Activity( "Cheerleading Essentials", "07/12/2021", "12:00", "Handstands and girl talk")
 
-
+activity_repository.save(activity1)
+activity_repository.save(activity2)
+activity_repository.save(activity3)
 
 
 member1 = Member( "Steve the Pirate", 35)
