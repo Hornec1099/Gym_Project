@@ -4,23 +4,23 @@
 <h2>  Here are all the members who are currently signed up to the Gym </h2>
 
 <p><a href = '/members/new'> Add a New Member </a></p>
-
-<table>
+<section class = table-array>
+<table class = unique-table>
     <tr>
         <th>Member Name </th>
         <th> </th>
         <th>Age</th>
-        
+        <th> View Member</th>
     </tr>
 {% for member in all_members %}
     <tr> 
-        <td><a href = '/members/{{member.id}}'> {{member.name}} </a></td>
+        <td>> {{member.name}} </td>
         <td>  </td>
         <td> {{member.age }}</td>
-        
+        <td><a href = '/members/{{member.id}}'> Go To</a></td>
     </tr>
 {%endfor%}
-
+</section>
 </table>
 
 {% endblock %}

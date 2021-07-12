@@ -2,23 +2,23 @@
 
 {% block content %}
 
-<p> This is the Home page </p>
-
-<div> 
+<div class='button-blocks'>
+<div class = 'unique-item'> 
     <p>Look at a list of all our Members</p>
     <form action = '/members' method = 'get'>
-        <button type = 'submit'> Look at Our Members </button>
+        <button class=button-form type = 'submit'> Go to our Members  Page</button>
     </form> 
 
 </div>
 <br>
-<div> 
+<div class= 'unique-item'> 
     <p> Look at a list of all our Activities </p>
-    <form action = '/activity' method = 'get'>
-    <button type = 'submit'> Look at Our Activities </button>
+    <form action = '/activity' method = 'get' >
+    <button class=button-form type = 'submit'> Go to our Activities Page</button>
     </form> 
 </div>
-
+</div>
+<br>
 <div>
     <img src = 'static/images/unnamed.jpeg' alt = "Patches O'Houlihan" width = '200' height ='150'>
     <p> In Memorium of Patches O'Houlihan  </p>

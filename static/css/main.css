@@ -1,0 +1,97 @@
+.main-body{
+    margin:auto;
+    width: 80%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* all the nav bar content */
+.main-bar {
+    background-color:gold;
+    color:crimson;
+    font-family: Brush script MT, Brush Script Std, cursive;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+a:visited{
+    color :inherit;
+}
+
+.header { 
+    font-size: 450%;
+    margin:35px;
+    
+}
+
+.nav-list{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 200%;
+    
+}
+
+.nav-list > li {
+    margin: 35px 15px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* all the home pag(index.html content */
+
+.button-blocks{
+    height:500px; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:auto;
+    background-color:orangered;
+    border:1px transparent;
+    border-radius: 25px;  
+}
+.unique-item{
+    height:350px;
+    margin: auto;
+    width: 50%;
+    background-color:darkorange;
+    border:1px transparent;
+    border-radius: 25px;  
+    text-align: center;
+    font-size: 4vh;
+}
+.button-form{
+    display:block;
+    margin:auto;
+    width:50%;
+    background-color:transparent;
+    color:yellow;
+    border:transparent;
+    font-size: 3vh;
+}
+
+.table-array{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.unique-table{
+    color:gold;
+    height:100px;
+    margin: auto;
+    width: 25%;
+    background-color:crimson;
+    border:1px transparent;
+    border-radius: 25px;  
+    text-align: center;
+    font-size: 15px;
+}
+.activity-button{
+        display:block;
+        margin:auto;
+        width:50%;
+        background-color:transparent;
+        color:yellow;
+        border:transparent;
+        font-size: 15px;
+}
