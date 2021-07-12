@@ -2,7 +2,7 @@
 
 {% block content %}
 <section class = 'individual-activity'>
-<h3> {{ activity.name}} </h3>
+<h2> {{ activity.name}} </h2>
 
 <table class = 'activity-table'> 
     <tr> 
@@ -27,7 +27,7 @@
     {% endfor %}
 </ul>
 <br>
-<a href = '/booking'> Book in for {{activity.name}}</a>
+<a href = '/booking/new'> Book in for {{activity.name}}</a>
 
 <a href = '/activity/{{activity.id}}/edit'> Edit {{activity.name}}</a>
 

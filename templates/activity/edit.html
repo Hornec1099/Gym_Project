@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<form action= '/activity/{{activity.id}}' method = "post">
+<section class='new-entry-form'>
+<form action= '/activity/{{activity.id}}' method = "post" class ='the-form'>
 
     <label for = 'activity_name'> What's the Name? :</label>
     <input type = 'text' name = 'activity_name' id = 'activity_name' value ='{{activity.name}}'>
@@ -16,9 +16,9 @@
     <label for ='description'> What can people expect? :</label>
     <textarea name = 'description' id = 'description' col = 15 row = 2  > {{activity.description}} </textarea>
 
-    <button type = "submit"> Update {{activity.name}} </button>
+    <button class = 'form-button' type = "submit"> Update {{activity.name}} </button>
 
 
 </form>
-
+</section>
 {% endblock %}

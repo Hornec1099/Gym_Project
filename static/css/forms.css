@@ -1,0 +1,38 @@
+.new-entry-form{
+    display:flex;
+    flex-direction: column;
+    color:gold;
+    margin: auto;
+    width: 32.5%;
+    background-color:crimson;
+    border:1px transparent;
+    border-radius: 25px;  
+    text-align: center;
+    font-size: 15px;
+}
+
+.the-form{
+    display:flex;
+    flex-direction:column;
+    width:70%;
+    margin:auto;
+    
+}
+input{
+    background-color:goldenrod;
+    width:60%;
+    margin:auto;
+}
+textarea{
+    background-color:goldenrod;
+}
+
+.form-button{
+    padding:0px;
+    display:block;
+    margin:auto;
+    width:40%;
+    background-color:transparent;
+    color:yellow;
+    border:transparent;
+    font-size: 2vh;}

@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<form action = "/members/{{member.id}}" method = "post">
+<section class = 'new-entry-form'>
+<form class = 'the-form' action = "/members/{{member.id}}" method = "post">
 
     <label for = "edited_name" > Name : </label>
     <input type = "text" name = "edited_name" id = "edited_name" value = "{{member.name}}" required autofocus > 
@@ -10,8 +10,8 @@
     <label for ="edited_age"> Age : </label>
     <input type = "number" name = "edited_age" id = "edited_age" min = 0 value = "{{member.age}}" required >
 
-    <button type ="submit"> Edit Member </button>
+    <button class = 'form-button' type ="submit"> Update Member </button>
 
 </form>
-
+</section>
 {% endblock %}

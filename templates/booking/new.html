@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<section class='new-entry-form'>
 <h3>What do you want to book?</h3>
 
-<form action = '/' method = 'post'>
+<form class = 'the-form' action = '/' method = 'post'>
      
     <label for = 'member'> Who is booking?  </label>
     <select name ='member' id = 'member'>
@@ -20,11 +20,11 @@
         {% endfor %}
     </select>
 
-    <button type ='submit'> Book the Activity </button>
+    <button class = 'form-button' type ='submit'> Book the Activity </button>
 
 
 </form>
 
-
+</section>
 
 {% endblock %}

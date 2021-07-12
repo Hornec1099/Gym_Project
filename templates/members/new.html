@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<form action = "/members" method = "post">
+<section class='new-entry-form'>
+<form class = 'the-form' action = "/members" method = "post">
 
     <label for = "name" > Name : </label>
     <input type = "text" name = "name" id = "name"> 
@@ -10,8 +10,8 @@
     <label for ="age"> Age : </label>
     <input type = "number" name = "age" id = "age" min = 0 >
 
-    <button type ="submit"> Add Member </button>
+    <button class='form-button' type ="submit"> Add Member </button>
 
 </form>
-
+</section>
 {% endblock %}
