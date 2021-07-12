@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'images/css/main.css') }}">
     <title> Average Joe's </title>
 </head>
 <body>
+<div class= 'main-bar'>
+<img src = 'static/images/gym_face.jpg' alt = 'Gym Logo' width = 225 height = '175'>
+<h1 class = 'header'>Average Joe's Gym</h1>
 <nav> 
-    <ul>
+    <ul class = nav-list>
         <li><a href = "/"> Home </a></li>
         <li><a href = "/activity"> Activity </a></li>
         <li><a href = "/members"> Members </a></li>
-        <li><a href = "/bookings"> Bookings </a></li>
+        <li><a href = "/booking/new"> New Booking </a></li>
     </ul>
 </nav>
-
+</div>
 {% block content%}
 {% endblock %}
 

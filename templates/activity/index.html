@@ -21,7 +21,9 @@
         <td> {{activity.description}}</td>
     </tr>
 </table>
-
+<form action = "/activity/{{activity.id}}" >  
+    <button type = 'submit' > View Activity </button>
+</form>
 <br>
 {%endfor%}
 

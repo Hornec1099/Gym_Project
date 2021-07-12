@@ -1,0 +1,31 @@
+.main-bar {
+    background-color:gold;
+    color:crimson;
+    font-family: Brush script MT, Brush Script Std, cursive;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+a:visited{
+    color :inherit;
+}
+
+.header { 
+    font-size: 450%;
+    margin:35px;
+    
+}
+
+.nav-list{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 200%;
+    
+}
+
+.nav-list > li {
+    margin: 35px 15px;
+    list-style-type: none;
+    text-decoration: none;
+}

@@ -2,7 +2,10 @@ from db.run_sql import run_sql
 
 from models.activity import Activity
 from models.member import Member
+from models.booking import Booking
 
+import repositories.member_repository as member_repository
+import repositories.booking_repository as booking_repository
 
 def save(activity):
     sql = "INSERT INTO activities (name_of_activity, day_of, time_of, description) VALUES (%s,%s,%s,%s) RETURNING id"
@@ -36,10 +39,7 @@ def select_all():
 def update(activity):
     sql = "UPDATE activities SET (name_of_activity, day_of, time_of, description) = (%s, %s,%s,%s) WHERE id = %s"
     values = [activity.name , activity.date, activity.time, activity.description, activity.id]
-    result =run_sql(sql, values)
-
-    activity1 = Activity(result['name_of_activity'], result['day_of'], result['time_of'],result['description'],result['id'])
-    return activity1
+    run_sql(sql, values)
 
 
 def delete_all():
@@ -62,3 +62,16 @@ def members(activity):
         members.append(member)
 
     return members
+
+def bookings(activity):
+    bookings = []
+    sql = "SELECT * FROM bookings WHERE activity_id = %s "
+    values = [activity.id]
+    results = run_sql(sql, values) 
+
+    for result in results:
+        member = member_repository.select(result['member_id'])
+        booking = Booking(member ,activity, result['id']) 
+        bookings.append(booking) 
+    
+    return bookings

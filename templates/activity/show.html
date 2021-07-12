@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3> {{ activity.name}} </h3>
+
+<table> 
+    <tr> 
+        <th> Date </th>
+        <td> {{activity.date}} </td>
+    </tr>
+    <tr> 
+        <th> Time </th>
+        <td> {{activity.time}} </td>
+    </tr>
+</table>
+<h4> Activity Description</h4>
+<p>  {{activity.description}} </p>
+
+<h4>  Attendee's </h4>
+<ul>
+    {%for member in members %}
+    {% for booking in bookings %}
+    <li> {{member.name}}</li>
+    {% endfor %}
+    {% endfor %}
+</ul>
+
+<br>
+<a href = '/booking'> Book in for {{activity.name}}</a>
+<br>
+<a href = '/activity/{{activity.id}}/edit'> Edit {{activity.name}}</a>
+<br>
+<a href = '/activity/{{activity.id}}/delete'> Delete {{activity.name}}</a>
+
+{% endblock %}

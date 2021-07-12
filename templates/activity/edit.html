@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action= '/activity/{{activity.id}}' method = "post">
+
+    <label for = 'activity_name'> What's the Name? :</label>
+    <input type = 'text' name = 'activity_name' id = 'activity_name' value ='{{activity.name}}'>
+    
+    <label for = 'date'> When is it On? : </label>
+    <input type ="date" name ='date' id ='date' value = '{{activity.date}}'>
+
+    <label for =' time'> What time is is on? : </label>
+    <input type ="time" max = "20:00" min = "09:00" name = 'time' id = 'time'  value = '{{activity.time}}'>
+
+    <label for ='description'> What can people expect? :</label>
+    <textarea name = 'description' id = 'description' col = 15 row = 2  > {{activity.description}} </textarea>
+
+    <button type = "submit"> Update {{activity.name}} </button>
+
+
+</form>
+
+{% endblock %}
