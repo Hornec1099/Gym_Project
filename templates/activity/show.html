@@ -22,7 +22,12 @@
 <ul>
     {%for member in members %}
     {% for booking in bookings %}
-    <li> {{member.name}}</li>
+    <table class = 'activity-table'> 
+        <tr>
+            <td> {{member.name}}</td>
+            <td><a href = '/booking/{{booking.id}}'> Check Booking </a></td>
+        </tr>
+    </table>
     {% endfor %}
     {% endfor %}
 </ul>

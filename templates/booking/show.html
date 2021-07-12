@@ -1,8 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %} 
-<h4> Who Booked </h4>
+<section class = 'individual-activity'>
+<h4> Who Booked : </h4>
 <p> {{booking.member.name}}</p>
+<h4> What was Booking : </h4>
+<table class = 'activity-table'>
+<tr> 
+    <th> Activity :</th>
+    <td> {{booking.activity.name}}</td>
+</tr>
+<tr> 
+    <th> Date & Time :</th>
+    <td> {{booking.activity.date}}, {{booking.activity.time}}</td>
+</tr>
+<tr> 
+    <th>  Activity Description:</th>
+    <td> {{booking.activity.description}}</td>
+</tr>
+</table>
 
+<p><a href ='/booking/{{booking.id}}/delete'> Delete This Booking</a></p>
+</section>
 
-{% end block %}
+{% endblock %}

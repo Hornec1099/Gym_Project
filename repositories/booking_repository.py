@@ -27,6 +27,19 @@ def select_all():
         bookings.append(booking)
     return bookings
 
+def select(id):
+    booking = None
+    sql = "SELECT * FROM bookings WHERE id =%s"
+    values = [id]
+    result  = run_sql(sql, values)[0]
+
+    if result is not None:
+        member = member_repository.select(result['member_id'])
+        activity = activity_repository.select(result['activity_id'])
+        booking = Booking(member,activity,id)
+        
+    return booking
+
 def select_activity(booking):
     activity = None
     sql = "SELECT * FROM activities WHERE id = %s"

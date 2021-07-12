@@ -98,8 +98,9 @@ a:visited{
 
 /* all the content for individual activities being shown */
 .activity-table{
-    width: 50%;
+    width: auto;
     margin:auto;
+    padding:10px;
     
 }
 .individual-activity{

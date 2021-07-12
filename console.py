@@ -20,7 +20,7 @@ activity_repository.save(activity3)
 
 
 member1 = Member( "Steve the Pirate", 35)
-member2 = Member( "Gordon", 49)
+member2 = Member( "Gordon Gregowsky", 49)
 member3 = Member( "White Goodman", 32)
 
 member_repository.save(member1)
