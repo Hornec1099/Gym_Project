@@ -1,3 +1,10 @@
+body{
+    background-color:peru;
+    color: white;
+}
+a:visited{
+    color :inherit;
+}
 .main-body{
     margin:auto;
     width: 80%;
@@ -13,9 +20,6 @@
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-}
-a:visited{
-    color :inherit;
 }
 
 .header { 
@@ -38,10 +42,10 @@ a:visited{
     text-decoration: none;
 }
 
-/* all the home pag(index.html content */
+/* all the home pag(index.html content as well as list content for activities and also members*/
 
 .button-blocks{
-    height:500px; 
+    height:400px; 
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -51,14 +55,14 @@ a:visited{
     border-radius: 25px;  
 }
 .unique-item{
-    height:350px;
+    height:250px;
     margin: auto;
     width: 50%;
     background-color:darkorange;
     border:1px transparent;
     border-radius: 25px;  
     text-align: center;
-    font-size: 4vh;
+    font-size: 5vh;
 }
 .button-form{
     display:block;
@@ -79,7 +83,7 @@ a:visited{
     color:gold;
     height:100px;
     margin: auto;
-    width: 25%;
+    width: 32.5%;
     background-color:crimson;
     border:1px transparent;
     border-radius: 25px;  
@@ -94,4 +98,37 @@ a:visited{
         color:yellow;
         border:transparent;
         font-size: 15px;
+}
+
+/* all the content for individual activities being shown */
+.activity-table{
+    width: 50%;
+    margin:auto;
+    
+}
+.individual-activity{
+    color:gold;
+    height:auto;
+    margin: auto;
+    width: 32.5%;
+    background-color:crimson;
+    border:1px transparent;
+    border-radius: 25px;  
+    text-align: center;
+    font-size: 15px;
+    display:flex;
+    flex-direction: column;
+
+    
+}
+
+.individual-activity >h4 {
+    text-decoration: underline;
+    margin:0px;
+}
+
+.individual-activity >ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
 }

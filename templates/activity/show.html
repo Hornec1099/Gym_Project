@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<section class = 'individual-activity'>
 <h3> {{ activity.name}} </h3>
 
-<table> 
+<table class = 'activity-table'> 
     <tr> 
         <th> Date </th>
         <td> {{activity.date}} </td>
@@ -14,6 +14,7 @@
         <td> {{activity.time}} </td>
     </tr>
 </table>
+
 <h4> Activity Description</h4>
 <p>  {{activity.description}} </p>
 
@@ -25,12 +26,11 @@
     {% endfor %}
     {% endfor %}
 </ul>
-
 <br>
 <a href = '/booking'> Book in for {{activity.name}}</a>
-<br>
-<a href = '/activity/{{activity.id}}/edit'> Edit {{activity.name}}</a>
-<br>
-<a href = '/activity/{{activity.id}}/delete'> Delete {{activity.name}}</a>
 
+<a href = '/activity/{{activity.id}}/edit'> Edit {{activity.name}}</a>
+
+<a href = '/activity/{{activity.id}}/delete'> Delete {{activity.name}}</a>
+</section>
 {% endblock %}
