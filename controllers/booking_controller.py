@@ -22,8 +22,9 @@ def add_booking():
     activity_id = request.form['activity']
     member = member_repository.select(member_id)
     activity = activity_repository.select(activity_id)
-    booking = Booking(member, activity)
-    booking_repository.save(booking)
+    booking = Booking(member, activity)  
+    if booking_repository.check_booking(booking) == None:
+        booking_repository.save(booking)
     return redirect('/') 
 
 @booking_blueprint.route('/booking/<id>')

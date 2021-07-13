@@ -54,11 +54,23 @@ def select_member(booking):
     member = None
     sql = "SELECT * FROM members WHERE id = %s"
     values = [booking.member.id]
-    result = run_sql(sql , values)
+    result = run_sql(sql , values)[0]
     
     if result is not None:
-        member = Member(result['name_of_activity'], result['day_of'], result['time_of'],result['description'],result['id'])    
+        member = Member(result['name'] , result['age'], result['id'])    
     return member
+
+def check_booking(booking):
+    checked_booking = None
+    sql ="SELECT * FROM bookings WHERE member_id = %s AND activity_id = %s"
+    values = [booking.member.id, booking.activity.id]
+    results = run_sql(sql,values)
+    for result in results:
+        if result is not None:
+            member = member_repository.select(result['member_id'])
+            activity = activity_repository.select(result['activity_id'])
+            checked_booking = Booking( member , activity, result['id'])
+    return checked_booking
 
 
 def delete_all():
@@ -66,6 +78,6 @@ def delete_all():
     run_sql (sql)
 
 def delete(id):
-    sql = "DELETE * FROM bookings WHERE id = %s"
+    sql = "DELETE FROM bookings WHERE id = %s"
     values  = [id]
     run_sql(sql,values)

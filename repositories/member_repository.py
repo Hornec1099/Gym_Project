@@ -3,6 +3,7 @@ from db.run_sql import run_sql
 from models.member import Member
 from models.activity import Activity
 
+import repositories.activity_repository as activity_repository
 
 def save(member):
     sql = "INSERT INTO members(name, age) VALUES (%s, %s) RETURNING id"
@@ -33,6 +34,17 @@ def select(id):
         member = Member(result['name'] , result['age'], result['id'])
     return member
 
+
+def activities(member):
+    activities = []
+    sql = "SELECT activities.* FROM activities INNER JOIN bookings ON bookings.activity_id  = activities.id  WHERE member_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    for result in results:
+        activity = Activity(result['name_of_activity'], result['day_of'], result['time_of'],result['description'],result['id'])
+        activities.append(activity)
+    return activities
 
 def delete(id):
     sql = "DELETE FROM members WHERE id = %s"

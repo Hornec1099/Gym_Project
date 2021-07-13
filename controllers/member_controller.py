@@ -3,7 +3,7 @@ from flask import Blueprint
 from models.member import Member
 
 
-import repositories.member_repository as member_repository
+import repositories.member_repository as member_repository 
 
 member_blueprint = Blueprint( "members", __name__)
 
@@ -28,8 +28,9 @@ def create_member():
 
 @member_blueprint.route('/members/<id>')
 def show_member(id):
-    member =member_repository.select(id)
-    return render_template('members/show.html', member = member)
+    member = member_repository.select(id)
+    activities = member_repository.activities(member)
+    return render_template('members/show.html', member = member, activities = activities)
 
 
 @member_blueprint.route('/members/<id>/edit')

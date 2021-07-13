@@ -58,7 +58,7 @@ a:visited{
     font-size: 42px;
 }
 .unique-item >p {
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px 10px 0px;
 }
 .button-form{
     display:block;
@@ -73,19 +73,29 @@ a:visited{
 .table-array{
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
 }
 .unique-table{
     color:gold;
     height:100px;
-    margin: auto;
-    width: 32.5%;
+    width: 45%;
     background-color:crimson;
     border:1px transparent;
     border-radius: 25px;  
     text-align: center;
-    font-size: 15px;
+    margin:auto;
 }
+
+.unique-table> table{
+    margin:auto;
+}
+.unique-table>td{
+    font-size: 12px;
+}
+
 .activity-button{
         display:block;
         margin:auto;
@@ -154,4 +164,9 @@ a:visited{
     font-size: 15px;
     display:flex;
     flex-direction: column;
+}
+
+.member-activity-table{
+    width:auto;
+    font-size: 12px;
 }

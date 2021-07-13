@@ -5,8 +5,39 @@
 <h1> {{member.name}} </h1>
 
 <p> Members Age : {{member.age}} </p>
+
+<h4> All Current Bookings</h4>
+<table class = member-activity-table >
+    <tr>
+        <th>Activity Name</th>
+        <th></th>
+        <th>Date</th>
+        <th></th>
+        <th>Time</th>
+        <th></th>
+        <th>Description</th>
+    </tr>
+    {% for activity in activities %}
+    <tr>
+        <td>{{activity.name}}</td>
+        <td></td>
+        <td>{{activity.date}}</td>
+        <td></td>
+        <td>{{activity.time}}</td>
+        <td></td>
+        <td>{{activity.description}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
 <p><a href = '/members/{{member.id}}/edit'> Edit Details</a></p>
 <p><a href = '/members/{{member.id}}/delete'> Delete</a></p>
+
+
+
 </section>
+
 
 {% endblock %}

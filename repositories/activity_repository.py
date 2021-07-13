@@ -5,7 +5,7 @@ from models.member import Member
 from models.booking import Booking
 
 import repositories.member_repository as member_repository
-import repositories.booking_repository as booking_repository
+
 
 def save(activity):
     sql = "INSERT INTO activities (name_of_activity, day_of, time_of, description) VALUES (%s,%s,%s,%s) RETURNING id"

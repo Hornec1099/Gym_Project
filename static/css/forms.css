@@ -23,6 +23,11 @@ input{
     width:60%;
     margin:auto;
 }
+select{
+    background-color:goldenrod;
+    width:60%;
+    margin:auto;
+}
 textarea{
     background-color:goldenrod;
 }
