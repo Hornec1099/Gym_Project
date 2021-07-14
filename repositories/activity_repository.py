@@ -78,8 +78,8 @@ def bookings(activity):
 
 def search(to_search):
     searched = []
-    sql = "SELECT * FROM activities WHERE name_of_activity = %s OR  day_of = %s OR time_of = %s OR description = %s"
-    values = [to_search,to_search,to_search,to_search]
+    sql = "SELECT * FROM activities WHERE name_of_activity = %s "
+    values = [to_search]
     results= run_sql(sql, values)
 
     for result in results:

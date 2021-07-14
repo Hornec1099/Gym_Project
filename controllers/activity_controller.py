@@ -57,4 +57,8 @@ def delete_activity(id):
     activity_repository.delete(id)
     return redirect('/activity')
 
-
+@activity_blueprint.route('/activity/search' , methods = ['POST'])
+def search_activity():
+    info_to_search = request.form['search']
+    result = activity_repository.search(info_to_search)
+    return render_template('activity/search.html' , activities = result)

@@ -3,6 +3,11 @@
 {% block content %}
 <h2>  Here are all Available Activities here at Average Joe's </h2>
 
+<form action='/activity/search' method ='post'>
+    <input type = 'text' name = 'search' id = 'search' placeholder = 'search by Activity'> 
+    <button type = 'submit'> &#128269  </button>
+</form>
+
 <p><a href = '/activity/new'> Add a New Activity </a></p>
 <section class = table-array>
 {% for activity in activities %}

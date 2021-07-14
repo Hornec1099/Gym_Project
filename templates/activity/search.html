@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+<section class = table-array>
+    
+    <section class =unique-table>
+    <table >
+        <tr>
+            <th> Activity</th>
+            <th> Date</th>
+            <th> Time</th>
+            <th> Description</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        {% for activity in activities %}
+        <tr>
+            <td> {{activity.name}}</td>
+            <td> {{activity.date}}</td>
+            <td> {{activity.time}}</td>
+            <td> {{activity.description}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </section>
+
+    {% endblock %}
