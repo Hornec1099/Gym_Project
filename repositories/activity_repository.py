@@ -75,3 +75,14 @@ def bookings(activity):
         bookings.append(booking) 
     
     return bookings
+
+def search(to_search):
+    searched = []
+    sql = "SELECT * FROM activities WHERE name_of_activity = %s OR  day_of = %s OR time_of = %s OR description = %s"
+    values = [to_search,to_search,to_search,to_search]
+    results= run_sql(sql, values)
+
+    for result in results:
+        activity = Activity(result['name_of_activity'], result['day_of'], result['time_of'],result['description'],result['id'])
+        searched.append(activity)
+    return searched

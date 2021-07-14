@@ -57,3 +57,4 @@ def delete_activity(id):
     activity_repository.delete(id)
     return redirect('/activity')
 
+

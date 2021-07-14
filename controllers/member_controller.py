@@ -12,12 +12,6 @@ def index():
     members = member_repository.select_all()
     return render_template( "members/index.html", all_members = members)
 
-# @member_blueprint.route("/members/search", methods=['POST'])
-# def search():
-#     search_result = request.form['search']
-#     searched_members = member_repository.search(search_result)
-#     return render_template("members/search.html", members = searched_members)
-
 @member_blueprint.route("/members/new")
 def new_member_form():
     return render_template("members/new.html")
@@ -58,3 +52,9 @@ def alter_member(id):
 def delete_member_id(id):
     member_repository.delete(id)
     return redirect('/members')
+
+@member_blueprint.route("/members/search", methods=['POST'])
+def search():
+    search_info = request.form['search']
+    members_searched = member_repository.search(search_info)
+    return render_template("members/search.html", members = members_searched)
