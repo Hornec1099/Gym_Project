@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2> Here are Your Results</H2>
+
+    <section class = table-array>
+        <table class = unique-table>
+            <tr>
+                <th>Member Name </th>
+                <th> </th>
+                <th>Age</th>
+                <th> View Member</th>
+            </tr>
+        {% for member in members %}
+            <tr> 
+                <td>> {{member.name}} </td>
+                <td>  </td>
+                <td> {{member.age }}</td>
+                <td><a href = '/members/{{member.id}}'> Go To</a></td>
+            </tr>
+        {%endfor%}
+        </section>
+
+
+
+{% endblock %}

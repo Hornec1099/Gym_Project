@@ -46,6 +46,17 @@ def activities(member):
         activities.append(activity)
     return activities
 
+# def search(to_search):
+#     member_found = None
+#     sql = "SELECT * FROM members WHERE name LIKE %s OR age LIKE %s )"
+#     values = [to_search,to_search]
+#     result = run_sql(sql,values)[0]
+
+#     if result is not None:
+#         member_found = Member (result['name'],result['age'],result['id'])
+#     return member_found
+
+
 def delete(id):
     sql = "DELETE FROM members WHERE id = %s"
     values = [id]
