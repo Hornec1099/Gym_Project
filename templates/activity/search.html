@@ -3,7 +3,7 @@
 {% block content %}
 
 
-
+<h2> Here are the Search Results </h2>
 
 <section class = table-array>
     
@@ -13,9 +13,11 @@
             <th> Activity</th>
             <th> Date</th>
             <th> Time</th>
+            <th></th>
             <th> Description</th>
         </tr>
         <tr>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -26,7 +28,9 @@
             <td> {{activity.name}}</td>
             <td> {{activity.date}}</td>
             <td> {{activity.time}}</td>
+            <td></td>
             <td> {{activity.description}}</td>
+            <td><a href ='/activity/{{activity.id}}'> Go to Activity</a></td>
         </tr>
         {% endfor %}
     </table>
