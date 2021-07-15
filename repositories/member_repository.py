@@ -65,8 +65,8 @@ def delete_all():
 
 def search(to_search):
     members_found = []
-    sql = "SELECT * FROM members WHERE name = %s OR age = %s"
-    values = [to_search, to_search]
+    sql = "SELECT * FROM members WHERE name = %s "
+    values = [to_search]
     results = run_sql(sql,values)
     for result in results:
         member = Member (result['name'],result['age'],result['id'])
