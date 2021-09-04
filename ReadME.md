@@ -11,6 +11,7 @@ The app should show a list of all upcoming classes
 The app should show all members that are booked in for a particular class
 
 My Approach to the Project was to make each file as single focussed as possible and this is why i split the files into the following folders:
+
 -Models - This stored the Objects i was creating and would reuse to how the data i.e (members, Activities and Bookings)
 
 -DB  - This stored the information and start up file for the database as well as the run_sql function for accessing the database.
